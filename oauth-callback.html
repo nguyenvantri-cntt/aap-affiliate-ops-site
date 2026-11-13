@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AAP — TikTok OAuth callback</title>
+  <style>
+    body { font-family: Georgia, "Times New Roman", serif; max-width: 40rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.5; color: #1a1a1a; background: linear-gradient(160deg, #f7f3ec, #e8eef2); min-height: 100vh; }
+    h1 { font-size: 1.6rem; }
+    code { background: #fff; padding: 0.15rem 0.35rem; }
+  </style>
+</head>
+<body>
+  <h1>AAP Affiliate Ops</h1>
+  <p>TikTok Login Kit redirect target for app review.</p>
+  <p>Local MVP callback remains <code>http://localhost:4000/api/tiktok/callback</code> (Sandbox / local tunnel). Production HTTPS redirect uses this page until the API is deployed.</p>
+  <p id="q"></p>
+  <script>
+    document.getElementById('q').textContent = location.search
+      ? 'Query received: ' + location.search
+      : 'No OAuth query yet.';
+  </script>
+</body>
+</html>
