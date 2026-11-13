@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TikTok integration demo — AAP Affiliate Ops</title>
+    <style>
+      body { font-family: "Segoe UI", system-ui, sans-serif; max-width: 880px; margin: 40px auto; padding: 0 20px 64px; color: #14201c; background: #f4f7f5; }
+      h1 { margin-bottom: 6px; }
+      .muted { color: #5b6b64; }
+      .card { background: #fff; border: 1px solid #d7e2dc; border-radius: 12px; padding: 16px 18px; margin: 12px 0; }
+      code { background: #e8f0ec; padding: 2px 6px; border-radius: 4px; }
+      a { color: #0f766e; }
+    </style>
+  </head>
+  <body>
+    <p><a href="index.html">AAP Affiliate Ops</a></p>
+    <h1>TikTok integration demo</h1>
+    <p class="muted">Login Kit + Content Posting API end-to-end flow for app review</p>
+    <div class="card"><h2>1. Open AAP web app</h2><p>Operator opens AAP Affiliate Ops in the browser (Web platform).</p></div>
+    <div class="card"><h2>2. Login Kit — authorize TikTok</h2><p>User clicks Connect TikTok. App redirects to TikTok OAuth with scopes <code>user.info.basic</code>, <code>video.upload</code>, and <code>video.publish</code> (Direct Post).</p></div>
+    <div class="card"><h2>3. User grants consent</h2><p>TikTok shows consent screen. After approve, browser returns to Redirect URI <code>/api/tiktok/callback</code> and AAP stores refresh token.</p></div>
+    <div class="card"><h2>4. Prepare affiliate package</h2><p>Automation/AI Studio creates caption + media for an Affiliate-ready product. Human confirms once.</p></div>
+    <div class="card"><h2>5. Content Posting API</h2><p>Approved package is sent via Content Posting API: draft upload (<code>video.upload</code>) or Direct Post (<code>video.publish</code>) to the authorized creator account.</p></div>
+    <div class="card"><h2>6. Result in TikTok</h2><p>Video appears as draft inbox item or published post on the authorized TikTok profile. Operator reviews status in Publishing.</p></div>
+  </body>
+</html>
